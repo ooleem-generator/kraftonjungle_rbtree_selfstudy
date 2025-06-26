@@ -1,26 +1,47 @@
 {
-    "version": "0.2.0",
-    "configurations": [
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug test-rbtree",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/rbtree_lab/out/bin/test-rbtree",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}/rbtree_lab/out",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "preLaunchTask": "build-test",
+      "setupCommands": [
         {
-            "name": "Debug RBTree Tests",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/rbtree_lab/test/test-rbtree",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}/rbtree_lab/test",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "miDebuggerPath": "/usr/bin/gdb",
-            "preLaunchTask": "build-and-test",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ]
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
         }
-    ]
+      ]
+    },
+    {
+      "name": "Visualize",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/rbtree_lab/out/bin/visualize_rbtree",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}/rbtree_lab/out",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "preLaunchTask": "build-visualize",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
 }
